@@ -1,21 +1,139 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+/* Color Palette */
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #2F4F4F;
+  --accent-color: #39FF14;
+  --vibrant-cyan: #00FFFF;
+  --bright-white: #FFFFFF;
+  --soft-purple: #9B59B6;
 }
 
-html, body {
+/* Global Styles */
+body {
   margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+  color: var(--secondary-color);
+  background-color: var(--bright-white);
 }
 
-main {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bright-white);
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
   margin: auto;
+}
+
+#mission {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#mission img {
   width: 50%;
+  border-radius: 8px;
+}
+
+.mission-content {
+  width: 50%;
+}
+
+.use-case {
+  margin-bottom: 20px;
+}
+
+.use-case h3 {
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--bright-white);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: var(--vibrant-cyan);
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--bright-white);
+  text-align: center;
   padding: 20px;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+footer a {
+  color: var(--vibrant-cyan);
+  text-decoration: none;
 }
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #mission {
+      flex-direction: column;
+  }
+
+  #mission img, .mission-content {
+      width: 100%;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+} 
